@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="224" id="KGk-i7-Jjw" customClass="FindCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-e8-92d">
+                        <rect key="frame" x="0.0" y="53" width="320" height="178"/>
+                        <color key="backgroundColor" red="0.31431424949999998" green="0.90401368199999999" blue="0.23653371710000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="178" id="YSq-pc-DIb"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="TJI-NJ-N85">
+                            <size key="itemSize" width="120" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="YIy-In-7Uy"/>
+                            <outlet property="delegate" destination="-1" id="DPl-3p-Axf"/>
+                        </connections>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-Qn-0v6">
+                        <rect key="frame" x="36" y="3" width="274" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tab_topic_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="9pb-s2-YHE">
+                        <rect key="frame" x="3" y="13" width="33" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9pb-s2-YHE" secondAttribute="height" constant="5" id="p6D-fV-Vv4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hxz-Qn-0v6" secondAttribute="trailing" constant="10" id="6DO-YN-tvs"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Mgm-e8-92d" secondAttribute="bottom" constant="-16" id="8Ty-gB-4MW"/>
+                    <constraint firstItem="hxz-Qn-0v6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="E8I-7d-95P"/>
+                    <constraint firstItem="hxz-Qn-0v6" firstAttribute="leading" secondItem="9pb-s2-YHE" secondAttribute="trailing" id="QzK-dC-gb1"/>
+                    <constraint firstItem="Mgm-e8-92d" firstAttribute="top" secondItem="9pb-s2-YHE" secondAttribute="bottom" constant="12" id="Uva-6r-VNR"/>
+                    <constraint firstItem="Mgm-e8-92d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZWU-Gm-9DD"/>
+                    <constraint firstItem="Mgm-e8-92d" firstAttribute="top" secondItem="hxz-Qn-0v6" secondAttribute="bottom" constant="2" id="dYo-o5-EU1"/>
+                    <constraint firstItem="9pb-s2-YHE" firstAttribute="centerY" secondItem="hxz-Qn-0v6" secondAttribute="centerY" id="eRO-ce-RcD"/>
+                    <constraint firstAttribute="trailing" secondItem="Mgm-e8-92d" secondAttribute="trailing" id="eWs-TL-nmh"/>
+                    <constraint firstItem="9pb-s2-YHE" firstAttribute="leading" secondItem="Mgm-e8-92d" secondAttribute="leading" constant="3" id="oFO-04-dVe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collection4find" destination="Mgm-e8-92d" id="Ngg-cC-Mcp"/>
+                <outlet property="title4find" destination="hxz-Qn-0v6" id="KvP-v2-ydW"/>
+            </connections>
+            <point key="canvasLocation" x="347" y="103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_tab_topic_selected.png" width="60" height="60"/>
+    </resources>
+</document>
